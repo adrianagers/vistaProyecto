@@ -1,3 +1,4 @@
+{{-- @extends('layouts.plantilla.newgame') --}}
 @extends('layouts.app')
 
 @section('content')

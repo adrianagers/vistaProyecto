@@ -105,17 +105,18 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end pt-0">
                             
-                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-                                <svg class="icon me-2">
-                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-                                </svg> perfil </a>
-                                <!-- <a class="dropdown-item" href="#">
-                                <svg class="icon me-2"> -->
-                                <a href="" class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
-
-                                    <!-- <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use> -->
-                                <!-- </svg> Logout</a> -->
-                        </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('logout') }}">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+    
+                                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                             onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-jet-dropdown-link>
+                                </form>
+                            </div>
                     </li>
                 </ul>
                 <button class="header-toggler px-md-0 me-md-3" type="button"

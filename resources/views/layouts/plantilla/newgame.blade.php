@@ -49,10 +49,10 @@
 
 <body class="dark-theme">
     
-    <!-- @yield('layouts.coponentes.sidebar') -->
+   @include('layouts.componentes.sidebar')
    
     <div    class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
-      <!-- @yield('layouts.coponentes.navbar') -->
+   @include('layouts.componentes.navbar')
 
         
         <div class="body flex-grow-1 px-3">
@@ -63,8 +63,8 @@
         
     </div>
     <footer class="footer">
-            <!-- @yield('layouts.coponentes.footer') -->
-</footer>
+         @include('layouts.componentes.footer')
+
 
     <script src="{{url('js/plantilla/coreui.bundle.min.js')}}"></script>
     <script src="{{url('js/plantilla/simplebar.min.js')}}"></script>

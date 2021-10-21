@@ -1,5 +1,4 @@
 @extends('layouts.plantilla.newgame')
-
 @section('content')
     @if (Session::has('mensaje'))
     <div class="alert alert-primary alert-dismissible" role="alert">
